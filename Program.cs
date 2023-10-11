@@ -33,14 +33,23 @@ namespace Csharp_proba
                 Console.WriteLine();
             }
             ArrayList lista = new ArrayList();
-
             int zbir = 0;
             for (int i = 0; i < 5; i++)
             {
                 lista.Add(niz[i]);
                 zbir = zbir + Convert.ToInt16(lista[i]);
             }
-
+            Console.WriteLine(zbir);
+            
+            // alternativa: genericki tip, nema konverzije
+            List<int> lista2 = new List<int>();
+            int zbir2 = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                lista2.Add(niz[i]);
+                zbir2 = zbir2 + lista2[i];
+            }
+            Console.WriteLine(zbir2);
         }
     }
 }
